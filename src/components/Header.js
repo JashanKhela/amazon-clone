@@ -19,7 +19,7 @@ export const Header = () => {
                 <Link to="/login" className="header__link">
                     <div className="header__option">
                         <span className="header__optionLineOne">Sign In</span>
-                        <span className="header__optionLineTwo">Hello Jay</span>
+                        <span className="header__optionLineTwo">Hello Sarbjeet</span>
                     </div>
                 </Link>
                 {/* Second Link */}
