@@ -7,7 +7,7 @@ import {
 import { Header } from './components/Header'
 import { Home } from './pages/Home'
 import { Checkout } from './pages/Checkout'
-
+import { Login } from './pages/Login'
 import './styles/app.css'
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
             <Checkout/>
           </Route>
           <Route path="/login">
-            <h1>login</h1>
+            <Login/>
           </Route>
           <Route path="/">
             <Header />
