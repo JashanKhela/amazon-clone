@@ -1,9 +1,10 @@
+import { auth } from "../firebase";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useHistory} from "react-router-dom";
 import "../styles/login.css";
 
 export const Login = () => {
-
+    const history = useHistory();
     const [email , setEmail] = useState("");
     const [password , setPassword] = useState("");
 
@@ -18,7 +19,28 @@ export const Login = () => {
 
     const signIn = (e) => {
         e.preventDefault();
-        console.log("working thooooo")
+        auth.signInWithEmailAndPassword(email,password)
+        .then((auth) => {
+            if(auth){
+                history.push('/')
+            }
+        })
+        .catch(error => alert(error.message))
+
+    }
+
+    const register = (e) => {
+        e.preventDefault();
+        console.log("register")
+        //regiser 
+        auth.createUserWithEmailAndPassword(email , password)
+            .then((auth) => {
+                console.log(auth)
+                if(auth){
+                    history.push('/')
+                }
+            })
+            .catch(error => alert(error.message));   
     }
 
 
@@ -47,7 +69,7 @@ export const Login = () => {
               By continuing, you agree to Amazon's Clone's Conditions of Use and Privacy Notice.
               </p>
 
-              <button className="login__registerButton">Create An Account</button>
+              <button className="login__registerButton" onClick={register}>Create An Account</button>
           </form>
       </div>
     </div>
