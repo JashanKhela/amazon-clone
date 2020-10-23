@@ -8,6 +8,7 @@ import { Header } from './components/Header'
 import { Home } from './pages/Home'
 import { Checkout } from './pages/Checkout'
 import { Login } from './pages/Login'
+import { Payment } from './pages/Payment'
 import './styles/app.css'
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
@@ -39,12 +40,16 @@ export default function App() {
     <Router>
       <div className="app">
         <Switch>
+        <Route path="/login">
+            <Login/>
+          </Route>
           <Route path="/checkout">
             <Header />
             <Checkout/>
           </Route>
-          <Route path="/login">
-            <Login/>
+          <Route path="/payment">
+          <Header />
+            <Payment />
           </Route>
           <Route path="/">
             <Header />
