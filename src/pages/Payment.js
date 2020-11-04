@@ -31,14 +31,14 @@ const history = useHistory();
         const getClientSecret = async () => {
             const response = await axios({
                 method: 'post',
-                url: `/payments/create?total=${calculatePrice() * 100}`
+                url: `http://localhost:5001/clone-61bbc/us-central1/api/payments/create?total=${calculatePrice() * 100}`
             });
             setClientSecret(response.data.clientSecret)
         }
         getClientSecret();
       }, [basket])
 
-
+      console.log("CLINET SECRET ISSS" , clientSecret)
 
   const stripe = useStripe();
   const elements = useElements();
