@@ -3,7 +3,7 @@ import { useStateValue } from "../StateProvider";
 import "../styles/product.css";
 
 export const Product = ({ title, price, id, image, rating }) => {
-  const [{} , dispatch] = useStateValue();
+  const [ dispatch] = useStateValue();
 
   const addToBakset = () => {
     dispatch({
