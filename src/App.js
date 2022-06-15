@@ -19,7 +19,7 @@ const promise = loadStripe('pk_live_AUDqZGqKFPs6iAvKS7V8kVx800kP6PYHXx');
 
 export default function App() {
 
-  const [ {} , dispatch] = useStateValue();
+  const [ dispatch ] = useStateValue();
 
   useEffect(() => {
     //will only run when component loads because we didn't pass anything through the array
