@@ -36,6 +36,7 @@ const history = useHistory();
             setClientSecret(response.data.clientSecret)
         }
         getClientSecret();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [basket])
 
       console.log("CLINET SECRET ISSS" , clientSecret)
