@@ -36,7 +36,7 @@ const history = useHistory();
             setClientSecret(response.data.clientSecret)
         }
         getClientSecret();
-      }, [basket])
+      }, [basket, calculatePrice])
 
       console.log("CLINET SECRET ISSS" , clientSecret)
 
@@ -47,6 +47,7 @@ const history = useHistory();
       e.preventDefault();
       setProcessing(true);
 
+/* eslint-disable no-unused-vars */
 
        const payload = await stripe.confirmCardPayment(clientSecret, {
            payment_method: {
@@ -61,6 +62,7 @@ const history = useHistory();
        })
     ///stripe stuff
   };
+/* eslint-disable no-unused-vars */
 
   const handleChange = (e) => {
     setDisabaled(e.empty);
