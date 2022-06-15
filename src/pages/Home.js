@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/home.css'
+import '../styles/Home.css'
 import { Product } from '../components/Product'
 export const Home = () => {
     return (
