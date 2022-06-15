@@ -36,7 +36,7 @@ const history = useHistory();
             setClientSecret(response.data.clientSecret)
         }
         getClientSecret();
-      }, [basket, calculatePrice])
+      }, [basket])
 
       console.log("CLINET SECRET ISSS" , clientSecret)
 
